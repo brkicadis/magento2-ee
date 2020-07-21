@@ -16,7 +16,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Change extension release version
         id: check-version
-        uses: wirecard/extension-release-version@master
+        uses: brkicadis/extension-release-version@master
         with:
           repository: ${{ github.event.repository.name }}
       - name: Set global git conf
@@ -27,4 +27,4 @@ jobs:
         uses: wirecard/github-push-action@master
         with:
           branch: ${{ github.head_ref }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
